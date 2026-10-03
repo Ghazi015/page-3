@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "Genevieve Reine Luciano — JosC",
+    "description": "Ruang digital pribadi Genevieve Reine Luciano (JosC): wanita kerja keras, tulus, dan lucu."
+  },
+  "name": "Genevieve Reine Luciano",
+  "firstName": "Genevieve",
+  "lastName": "Reine Luciano",
+  "callName": "JosC",
+  "wordmark": "JOSC",
+  "tagline": "Wanita Kerja Keras",
+  "heroHintFine": "Gerakkan kursor untuk membuka sisi lainnya",
+  "heroHintTouch": "Ketuk foto untuk membuka sisi lainnya",
+  "heroToggle": "Sisi lain",
+  "scrollHint": "Gulir untuk masuk",
+  "introLine": "Wanita Kerja Keras",
+  "introSkip": "Lewati",
+  "karakterLabel": "Karakter",
+  "characters": ["Pemarah", "Bekerja Keras", "Baik Hati", "Tulus", "Lucu"],
+  "messageLabel": "Pesan",
+  "message": "Ketegaran seorang wanita menghadapi kehilangan, dan proses bangkit kembali.",
+  "messageCta": "Jangan biarkan siapa pun membatasi pencapaianmu.",
+  "messageBy": "— Genevieve",
+  "galleryLabel": "Galeri",
+  "galleryTitle": "JOSC Gallery",
+  "galleryNote": "Kumpulan momen, sebuah cerita dalam gambar.",
+  "worldLabel": "Dunia",
+  "worldTitle": "Dunianya",
+  "worldChips": ["Mansion", "Menggambar", "Antar Pesanan"],
+  "worldNote": "Ruang-ruang yang ia tinggali: rumah, kanvas, dan jalanan tempat ia antar pesanan.",
+  "footerNote": "Ruang digital pribadi — foto dan konten milik JosC.",
+  "footerYear": "2026",
+  "menu": {
+    "open": "Menu",
+    "close": "Tutup",
+    "title": "Jelajahi",
+    "sections": [
+      { "id": "hero", "label": "Beranda" },
+      { "id": "karakter", "label": "Karakter" },
+      { "id": "pesan", "label": "Pesan" },
+      { "id": "galeri", "label": "Galeri" },
+      { "id": "dunia", "label": "Dunia" }
+    ]
+  },
+  "states": {
+    "errorTitle": "Ada yang tersangkut.",
+    "errorBody": "Konten belum bisa dimuat. Coba lagi sebentar lagi.",
+    "retry": "Coba lagi",
+    "emptyPhotos": "Foto segera hadir.",
+    "imgMissing": "Foto tidak tersedia",
+    "notFoundTitle": "404",
+    "notFoundBody": "Halaman ini tidak ada di dunianya JosC.",
+    "notFoundLink": "Kembali ke beranda"
+  },
+  "skipLink": "Langsung ke konten"
+}
