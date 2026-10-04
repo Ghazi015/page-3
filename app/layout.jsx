@@ -1,8 +1,4 @@
-import { Anton, Instrument_Serif } from 'next/font/google';
 import './globals.css';
-
-const d = Anton({ subsets: ['latin'], weight: '400', variable: '--font-d', display: 'swap' });
-const s = Instrument_Serif({ subsets: ['latin'], weight: '400', style: ['normal', 'italic'], variable: '--font-s', display: 'swap' });
 
 export const metadata = {
   title: 'NAMA KAMU — Sebuah Film Pendek',
@@ -11,7 +7,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="id" className={`${d.variable} ${s.variable}`}>
+    <html lang="id">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+      </head>
       <body>{children}</body>
     </html>
   );

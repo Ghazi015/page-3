@@ -1,5 +1,5 @@
 /* ===== STYLE & ANIMASI. Teks ada di lib/content.js, gerakan diatur di sini ===== */
-:root{--cream:#F9F8F2;--forest:#262B1E;--ink:#0E0F10;--lime:#D7FF1E;--off:#EDEEE4;--d:var(--font-d),Impact,sans-serif;--s:var(--font-s),Georgia,serif}
+:root{--font-d:'Anton';--font-s:'Instrument Serif';--cream:#F9F8F2;--forest:#262B1E;--ink:#0E0F10;--lime:#D7FF1E;--off:#EDEEE4;--d:var(--font-d),Impact,sans-serif;--s:var(--font-s),Georgia,serif}
 @property --c{syntax:'<percentage>';inherits:true;initial-value:50%}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
