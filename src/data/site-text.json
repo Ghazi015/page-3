@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "title": "Genevieve Reine Luciano — Profil & Galeri",
+    "description": "Profil personal dan portofolio foto Genevieve Reine Luciano — karakter IC GTA V Roleplay yang diperankan oleh JosC."
+  },
+  "hero": {
+    "kicker": "Karakter IC · GTA V Roleplay",
+    "nameLine1": "Genevieve",
+    "nameLine2": "Reine Luciano",
+    "alias": "diperankan oleh JosC",
+    "scrollHint": "gulir untuk mengenalnya",
+    "swapLabel": "ganti foto"
+  },
+  "message": {
+    "title": "Sepucuk Pesan",
+    "lines": [
+      "Ketegaran seorang wanita menghadapi kehilangan, dan proses bangkit kembali.",
+      "Jangan biarkan siapa pun membatasi pencapaianmu."
+    ],
+    "attribution": "Genevieve Reine Luciano"
+  },
+  "strip": {
+    "title": "Serpihan Momen"
+  },
+  "worlds": {
+    "title": "Dua Dunia",
+    "peran": {
+      "slug": "dalam-peran",
+      "title": "Dalam Peran",
+      "desc": "Sisi tegas sang karakter — potret dari dunia roleplay.",
+      "doorLabel": "masuk"
+    },
+    "karya": {
+      "slug": "ruang-karya",
+      "title": "Ruang Karya",
+      "desc": "Hobi menggambar dan desain baju — sisi tenang di luar peran.",
+      "doorLabel": "masuk",
+      "facts": ["menggambar", "desain baju"]
+    }
+  },
+  "gallery": {
+    "title": "Galeri",
+    "intro": "Kumpulan momen dalam gambar — pilih foto untuk melihat dan mengunduh."
+  },
+  "closing": {
+    "big": "Genevieve",
+    "line": "A collection of moments, a story in pictures, a life well-lived.",
+    "note": "— tertulis pada sampul JOSC Gallery"
+  },
+  "footer": {
+    "credit": "Genevieve Reine Luciano — karakter IC GTA V Roleplay, diperankan oleh JosC.",
+    "tags": ["menggambar", "desain baju"]
+  }
+}
