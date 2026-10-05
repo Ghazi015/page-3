@@ -1,21 +1,233 @@
-<!doctype html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>Genevieve Reine Luciano — Profil &amp; Galeri</title>
-    <meta name="description" content="Profil personal dan portofolio foto Genevieve Reine Luciano — karakter IC GTA V Roleplay yang diperankan oleh JosC." />
-    <meta property="og:title" content="Genevieve Reine Luciano — Profil & Galeri" />
-    <meta property="og:description" content="Ruang digital personal: potret, dua dunia, dan galeri foto Genevieve Reine Luciano." />
-    <meta property="og:type" content="profile" />
-    <meta property="og:image" content="/photos/potret-putih.webp" />
-    <meta name="theme-color" content="#0d0b12" />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%230d0b12'/%3E%3Cpath%20d='M14%2022c10%2018%2026%2018%2036%206'%20fill='none'%20stroke='%23b79cff'%20stroke-width='3'%20stroke-linecap='round'/%3E%3Cpath%20d='M14%2022c12%2026%2024%2026%2036%2014'%20fill='none'%20stroke='%23f5a8c8'%20stroke-width='3'%20stroke-linecap='round'/%3E%3C/svg%3E" />
-    <link rel="preload" as="image" href="/photos/potret-putih.webp" fetchpriority="high" />
-    <link rel="preload" as="image" href="/photos/potret-hitam.webp" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>NAMA KAMU — A Personal Visual Archive</title>
+  <meta name="description" content="A personal cinematic photo archive. Moments worth keeping.">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/images/portrait-light.webp">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { ink: '#0b0b0c', paper: '#f3f1ec', warm: '#f1ede4', mute: '#8d8b86', accent: '#b4dcff' },
+      fontFamily: { display: ['"Space Grotesk"', 'sans-serif'], sans: ['Inter', 'sans-serif'] }
+    } } };
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-ink text-warm font-sans antialiased">
+
+  <!-- Loader -->
+  <div id="loader" aria-hidden="true">
+    <p class="label text-mute absolute left-5 md:left-10 top-6">Loading archive</p>
+    <p class="font-display font-bold uppercase tracking-tighter text-[clamp(2.5rem,9vw,8rem)] leading-none" data-site="name">NAMA KAMU</p>
+    <p class="label absolute left-5 md:left-10 bottom-6"><span data-count>01</span> / 03</p>
+    <span class="absolute left-0 bottom-0 h-[2px] w-full bg-accent origin-left scale-x-0" data-bar></span>
+  </div>
+
+  <div id="cursor" aria-hidden="true"><span class="label"></span></div>
+
+  <!-- Navigation -->
+  <div class="nav-bg" aria-hidden="true"></div>
+  <header id="nav" class="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-5 md:px-10 py-5 text-white mix-blend-difference">
+    <a href="#home" class="font-display font-bold text-sm tracking-[.2em] uppercase" data-site="name" data-cursor="open">NAMA KAMU</a>
+    <nav class="hidden md:flex gap-10 label" aria-label="Primary">
+      <a class="nav-link" href="#home">Home</a>
+      <a class="nav-link" href="#gallery">Gallery</a>
+      <a class="nav-link" href="#stories">Stories</a>
+      <a class="nav-link" href="#archive">Archive</a>
+    </nav>
+    <div class="flex items-center gap-6">
+      <span class="hidden md:block label tabular-nums" id="progress" aria-hidden="true">000</span>
+      <button id="menuBtn" class="label py-2" aria-expanded="false" aria-controls="menu">Menu</button>
+    </div>
+  </header>
+
+  <div id="menu" aria-label="Menu">
+    <button id="menuClose" class="label absolute right-5 md:right-10 top-6 py-2">Close</button>
+    <nav class="flex flex-col gap-2 px-5 md:px-10" aria-label="Menu links">
+      <a href="#home" class="menu-link">Home</a>
+      <a href="#gallery" class="menu-link">Gallery</a>
+      <a href="#stories" class="menu-link">Stories</a>
+      <a href="#archive" class="menu-link">Archive</a>
+    </nav>
+    <p class="label text-mute absolute left-5 md:left-10 bottom-6">Archive / 2026</p>
+  </div>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="relative h-[100svh] min-h-[560px] overflow-hidden bg-paper text-ink" aria-label="Introduction">
+      <div id="heroStack" class="absolute inset-0">
+        <img class="hero-img" src="assets/images/portrait-light.webp" alt="Portrait of a woman with silver hair in a white suit" width="957" height="1644" fetchpriority="high" decoding="async">
+        <img class="hero-img" src="assets/images/portrait-shadow.webp" alt="Portrait of a woman with silver hair in a black suit, tongue out" width="957" height="1644" decoding="async">
+        <img class="hero-img" src="assets/images/portrait-light.webp" alt="" aria-hidden="true" width="957" height="1644" decoding="async">
+      </div>
+      <div class="absolute inset-x-0 top-0 z-10 flex justify-between px-5 md:px-10 pt-24 md:pt-28 text-white mix-blend-difference label" data-hero-meta>
+        <span>Personal archive</span><span>2026</span>
+      </div>
+      <h1 data-hero-name class="absolute inset-x-0 bottom-[7svh] z-10 text-center font-display font-bold uppercase leading-[.8] tracking-[-.04em] text-white mix-blend-difference text-[clamp(3.4rem,17.5vw,19rem)]" aria-label="NAMA KAMU"><span class="line"><span data-site="name">NAMA KAMU</span></span></h1>
+      <div class="absolute inset-x-0 bottom-0 z-10 flex items-center justify-between px-5 md:px-10 pb-3 text-white mix-blend-difference label" data-hero-meta>
+        <p>A personal visual archive</p>
+        <div class="flex" role="group" aria-label="Choose hero photograph">
+          <button class="hero-tick" data-hero-tick aria-label="Photograph 1" aria-current="true"><span></span></button>
+          <button class="hero-tick" data-hero-tick aria-label="Photograph 2"><span></span></button>
+          <button class="hero-tick" data-hero-tick aria-label="Photograph 3"><span></span></button>
+        </div>
+        <p class="hidden sm:block">Scroll ↓</p>
+      </div>
+    </section>
+
+    <!-- Intro / note -->
+    <section id="note" class="relative bg-ink px-5 md:px-10 pt-[16vh] pb-[22vh]">
+      <div class="grid md:grid-cols-12 gap-y-12 max-w-[1600px] mx-auto">
+        <p class="label text-accent md:col-span-2">A note</p>
+        <div class="md:col-span-6">
+          <h2 data-reveal class="font-display font-bold uppercase leading-[.9] tracking-tighter text-[clamp(2.8rem,8vw,8.5rem)]">
+            <span class="line"><span>Some moments</span></span><span class="line"><span>deserve</span></span><span class="line"><span>to stay.</span></span>
+          </h2>
+          <div data-fade class="mt-12 max-w-md text-mute text-sm md:text-base space-y-3">
+            <p>Collected in between. Nothing staged, nothing hurried.</p>
+            <p>Some were taken in light, some after it left. All of them are here, in the order they were kept.</p>
+          </div>
+        </div>
+        <div class="md:col-span-3 md:col-start-10 relative z-10 md:-mt-[42vh]" data-slot="photo-003" data-parallax="5"></div>
+      </div>
+    </section>
+
+    <!-- Featured -->
+    <section id="featured" class="bg-ink px-5 md:px-10 pb-[18vh]" aria-label="Featured photograph">
+      <div class="grid md:grid-cols-12 gap-8 items-end max-w-[1600px] mx-auto">
+        <div class="md:col-span-2 label text-mute space-y-2"><p>2026</p><p>Portrait</p><p class="text-accent">01</p></div>
+        <div class="md:col-span-10" data-slot="photo-002"></div>
+      </div>
+    </section>
+
+    <!-- Fullscreen moment -->
+    <section id="moment" class="relative h-[100svh] overflow-hidden bg-ink" aria-label="Fullscreen moment">
+      <div id="momentMask" class="absolute inset-0 overflow-hidden">
+        <img id="momentImg" src="assets/images/portrait-shadow.webp" alt="Close portrait in a black suit" width="957" height="1644" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" style="object-position:50% 24%;transform-origin:50% 24%;transform:scale(1.8)">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-black/30"></div>
+      </div>
+      <div id="momentText" class="absolute inset-x-0 bottom-0 z-10 p-5 md:p-10 text-white">
+        <p class="label text-accent mb-4">Still in frame</p>
+        <p class="font-display font-bold uppercase leading-[.9] tracking-tighter text-[clamp(2.4rem,7.5vw,7.5rem)]">Between memory<br>and now.</p>
+      </div>
+    </section>
+
+    <!-- Gallery: worlds -->
+    <section id="gallery" class="relative px-5 md:px-10 py-[16vh]" style="background:#151514">
+      <div class="max-w-[1600px] mx-auto">
+        <p class="label text-accent">Gallery — <span id="catTitle">Light</span></p>
+        <div class="mt-8 flex flex-wrap gap-x-8 md:gap-x-12 items-baseline" role="group" aria-label="Choose a world">
+          <button class="cat" data-cat="light" aria-pressed="true" data-cursor="open">Light<sup class="label"></sup></button>
+          <button class="cat" data-cat="shadow" aria-pressed="false" data-cursor="open">Shadow<sup class="label"></sup></button>
+          <button class="cat" data-cat="detail" aria-pressed="false" data-cursor="open">Detail<sup class="label"></sup></button>
+        </div>
+        <p id="catNote" class="mt-6 max-w-sm text-mute text-sm"></p>
+        <div id="stage" class="stage mt-[10vh]" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Stories -->
+    <section id="stories" class="on-paper bg-paper text-ink">
+      <div class="px-5 md:px-10 pt-[16vh] pb-[10vh] max-w-[1600px] mx-auto"><p class="label">Stories — 04 chapters</p></div>
+
+      <article class="px-5 md:px-10 pb-[20vh] grid md:grid-cols-12 gap-8 items-end max-w-[1600px] mx-auto">
+        <div class="md:col-span-4 md:col-start-2" data-slot="photo-001" data-parallax="3"></div>
+        <div class="md:col-span-5 md:col-start-7 md:pb-16">
+          <p class="label mb-6">01 — Arrival</p>
+          <h3 data-reveal class="font-display font-bold uppercase leading-[.9] tracking-tighter text-[clamp(2.4rem,6vw,6rem)]"><span class="line"><span>Quiet,</span></span><span class="line"><span>then all at once.</span></span></h3>
+          <p data-fade class="mt-6 max-w-xs text-sm opacity-70">The first frame is always the calmest one.</p>
+        </div>
+      </article>
+
+      <article class="px-5 md:px-10 pb-[20vh] max-w-[1600px] mx-auto">
+        <p class="label mb-10">02 — Between moments</p>
+        <div class="grid md:grid-cols-12 gap-8 items-start">
+          <div class="md:col-span-5 md:col-start-2" data-slot="photo-010" data-parallax="3"></div>
+          <div class="md:col-span-4 md:col-start-8 md:mt-[22vh]" data-slot="photo-005" data-parallax="-3"></div>
+        </div>
+        <h3 data-reveal class="mt-16 font-display font-bold uppercase leading-[.9] tracking-tighter text-[clamp(2.4rem,6vw,6rem)] md:ml-[16%]"><span class="line"><span>Two sides,</span></span><span class="line"><span>one frame.</span></span></h3>
+      </article>
+
+      <article class="px-5 md:px-10 pb-[20vh] grid md:grid-cols-12 gap-8 items-end max-w-[1600px] mx-auto">
+        <div class="md:col-span-5 md:col-start-2 md:pb-16 order-2 md:order-1">
+          <p class="label mb-6">03 — After the light</p>
+          <h3 data-reveal class="font-display font-bold uppercase leading-[.9] tracking-tighter text-[clamp(2.4rem,6vw,6rem)]"><span class="line"><span>What stays</span></span><span class="line"><span>when it fades.</span></span></h3>
+          <p data-fade class="mt-6 max-w-xs text-sm opacity-70">Darker, slower, closer to the truth.</p>
+        </div>
+        <div class="md:col-span-4 md:col-start-8 order-1 md:order-2" data-slot="photo-004" data-parallax="3"></div>
+      </article>
+
+      <div id="stripWrap" class="bg-ink text-warm py-[10vh] overflow-hidden">
+        <p class="label text-accent px-5 md:px-10 mb-10">04 — Contact sheet</p>
+        <div id="strip" class="strip"></div>
+      </div>
+    </section>
+
+    <!-- Archive -->
+    <section id="archive" class="bg-ink px-5 md:px-10 py-[16vh]">
+      <div class="max-w-[1600px] mx-auto">
+        <p class="label text-accent">Archive — 2022 / 2026</p>
+        <div id="archiveList" class="mt-10"></div>
+      </div>
+    </section>
+
+    <!-- Social -->
+    <section id="follow" class="bg-ink px-5 md:px-10 pb-[18vh]">
+      <div class="max-w-[1600px] mx-auto border-t border-white/10 pt-[10vh]">
+        <p class="label text-accent">Follow the journey</p>
+        <ul class="mt-10 font-display font-bold uppercase tracking-tighter text-[clamp(2.4rem,8vw,7.5rem)] leading-[1.05]">
+          <li><a class="soc" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" data-cursor="open">Instagram <span>↗</span></a></li>
+          <li><a class="soc" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" data-cursor="open">TikTok <span>↗</span></a></li>
+          <li><a class="soc" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" data-cursor="open">YouTube <span>↗</span></a></li>
+          <li><a class="soc" href="https://x.com/" target="_blank" rel="noopener noreferrer" data-cursor="open">X <span>↗</span></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-paper text-ink px-5 md:px-10 pt-[14vh] pb-6 overflow-hidden">
+    <p class="label mb-6">Always in frame.</p>
+    <p class="font-display font-bold uppercase leading-[.8] tracking-[-.05em] text-[clamp(3.4rem,18vw,20rem)]" data-site="name">NAMA KAMU</p>
+    <nav class="mt-14 flex flex-wrap gap-x-8 gap-y-3 label" aria-label="Footer">
+      <a class="link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" data-cursor="open">Instagram</a>
+      <a class="link" href="#archive" data-cursor="open">Archive</a>
+      <a class="link" href="#gallery" data-cursor="open">Gallery</a>
+      <a class="link" href="assets/images/portrait-light.webp" download="portrait-light.webp" data-cursor="save">Download</a>
+    </nav>
+    <p class="mt-10 label opacity-50">© 2026 — Archive / 2026</p>
+  </footer>
+
+  <!-- Fullscreen viewer -->
+  <div id="viewer" role="dialog" aria-modal="true" aria-label="Photograph viewer">
+    <div class="flex items-center justify-between px-5 md:px-10 py-5">
+      <p class="label tabular-nums" data-v="index">01 / 01</p>
+      <button class="label py-2" data-v="close">Close ✕</button>
+    </div>
+    <div class="vwr-stage">
+      <button class="vwr-nav left-2 md:left-6" data-v="prev" aria-label="Previous photograph">←</button>
+      <div class="vwr-frame" data-v="frame"></div>
+      <button class="vwr-nav right-2 md:right-6" data-v="next" aria-label="Next photograph">→</button>
+    </div>
+    <div class="flex items-end justify-between gap-6 px-5 md:px-10 py-5">
+      <div><p class="font-display font-bold uppercase tracking-tight text-xl md:text-3xl" data-v="title"></p><p class="label text-mute mt-2" data-v="meta"></p></div>
+      <a class="link label text-accent" data-v="download" href="#" download data-cursor="save">Download →</a>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+  <script src="js/viewer.js" defer></script>
+  <script src="js/cursor.js" defer></script>
+  <script src="js/hero.js" defer></script>
+  <script src="js/motion.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
 </html>
